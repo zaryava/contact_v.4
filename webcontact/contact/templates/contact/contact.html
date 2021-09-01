@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <!-- Поля формы выводятся последовательно  -->
+    {{ form.as_p }}
+    <button type="submit">Сохранить</button>
+</form>
+
+</body>
+</html>

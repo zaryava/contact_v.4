@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>ПРОГРАММА КОНТАКТЫ</h1>
+        {% for contact in contacts %}
+            <p>-------------------------------------------------</p>
+            <p><h2>{{ contact.lastname }}: {{ contact.phonenumber }}</h2></p>
+            <img src="{{ contact.img.url }}">
+        {% endfor %}
+        <br/>
+        <a href="{% url 'contact_create' %}"><h2>Создать новый контакт</h2></a>
+</body>
+</html>
